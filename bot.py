@@ -1,8 +1,10 @@
 # ライブラリの読み込み
-from slackbot.bot import Bot
+
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 # https://qiita.com/shutokawabata0723/items/9733a7e640a175c23f39
+
+from slackbot.bot import Bot
 
 def main():
 
