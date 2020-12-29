@@ -6,14 +6,24 @@ import slackbot_settings
 
 # メンションあり応答
 @respond_to('こんにちは')
-def greeting(message):
+def greeting01(message):
     # メンションして応答
-    message.reply('こんにちは!')
+    message.reply('こんにちは!!')
 
+@respond_to('役立たず')
+def greeting02(message):
+    # メンションして応答
+    message.send('...')
 
 # メンションなし応答
+@listen_to('今日は何曜日？')
+def greeting03(message):
+
+    # メンションなしで応答
+    message.reply('自分で調べましょう')
+
 @listen_to('もうかりまっか')
-def greeting(message):
+def greeting04(message):
 
     # メンションなしで応答
     message.send('ぼちぼちでんな')
